@@ -1,0 +1,15 @@
+{%extends "baza.html"%}
+{%block content%}
+
+{%for i in info%}
+    <div class="card">
+        <h1 style="font-family: Georgia"> Test </h1>
+        {{i}}
+    </div>
+{%endfor%}
+
+<div style="text-align: center">
+    <a class='link-style' href="/about">О нас</a>
+</div>
+
+{%endblock%}

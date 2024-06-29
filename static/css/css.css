@@ -1,0 +1,12 @@
+.link-style{
+    color: rgb(45, 201, 86);
+    font-size: 50px;
+    text-align: center;
+}
+.card{
+    background: rgba(53, 82, 129, 0.75);
+    padding: 10px;
+    margin: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+}
+
