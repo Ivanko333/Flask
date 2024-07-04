@@ -2,6 +2,7 @@
 {%block content%}
 
 {%for i in info%}
+
     <div class="card">
         <h1 class="header-style"> {{i.1}} </h1>
         <h2> {{i.3}} </h2>
@@ -11,10 +12,7 @@
          <p class="header-style"> {{i.2}} </p>
     </div>
     </div>
-{%endfor%}
 
-<div style="text-align: center">
-    <a class='link-style' href="/about">О нас</a>
-</div>
+{%endfor%}
 
 {%endblock%}

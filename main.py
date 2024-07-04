@@ -13,3 +13,12 @@ def index():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+
+@app.route('/add_article')
+def add_article():
+    return render_template('add_article.html')
+
+
+if __name__ == '__main__':
+    app.run(debug=True, port=8000)
