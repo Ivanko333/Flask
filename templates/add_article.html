@@ -2,15 +2,24 @@
 {%block content%}
 <div class="block">
     <label class="label-text">Заголовок статьи:</label>
-    <input type="text" id="title" required maxlength="15" size="50" />
+    <input class="input-title" type="text" id="title" required maxlength="15" size="50" />
 
     <label class="label-text">Тема статьи:</label>
     <select>
-        <option value='apple'>Новости</option>
-        <option value='apple'>Игры</option>
-        <option value='apple'>Развлечения</option>
-        <option value='apple'>IT/Программирование</option>
-        <option value='apple'>Электроника</option>
+        <option value='news'>Новости</option>
+        <option value='games'>Игры</option>
+        <option value='entertainments'>Развлечения</option>
+        <option value='IT'>IT/Программирование</option>
+        <option value='electronics'>Электроника</option>
+        <option value='literature'>Литература</option>
+        <option value='literature'>Музыка</option>
     </select>
+
+    <label class="label-text">Введите текст статьи:</label>
+    <textarea name="text" class="text-area"></textarea>
+    <form>
+        <button>Отправить данные</button>
+    </form>
 </div>
+
 {%endblock%}

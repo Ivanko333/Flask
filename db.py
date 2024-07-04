@@ -38,4 +38,3 @@ def get_info():
 
 
 create_table()
-
