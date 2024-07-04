@@ -35,5 +35,14 @@ li a{
 }
 
 .label-text{
-  display: block;
+    display: block;
+    font-family: "Arial";
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.block{
+    text-align: center;
+    background-color: #A0A0A0;
+    padding: 1px;
 }

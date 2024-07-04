@@ -1,5 +1,16 @@
 {%extends "baza.html"%}
 {%block content%}
-<label class="label-text">Name (4 to 8 characters):</label>
-<input type="text" id="name" name="name" required maxlength="15" size="10" />
+<div class="block">
+    <label class="label-text">Заголовок статьи:</label>
+    <input type="text" id="title" required maxlength="15" size="50" />
+
+    <label class="label-text">Тема статьи:</label>
+    <select>
+        <option value='apple'>Новости</option>
+        <option value='apple'>Игры</option>
+        <option value='apple'>Развлечения</option>
+        <option value='apple'>IT/Программирование</option>
+        <option value='apple'>Электроника</option>
+    </select>
+</div>
 {%endblock%}
