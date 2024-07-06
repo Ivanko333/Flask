@@ -1,25 +1,20 @@
 {%extends "baza.html"%}
 {%block content%}
+<body style="background-color: #A0A0A0">
 <div class="block">
-    <label class="label-text">Заголовок статьи:</label>
-    <input class="input-title" type="text" id="title" required maxlength="15" size="50" />
+    <form method="POST">
+        <label class="label-text">Заголовок статьи:</label>
+        {{form.title(class="input-title")}}
+        <label class="label-text">Тема статьи:</label>
 
-    <label class="label-text">Тема статьи:</label>
-    <select>
-        <option value='news'>Новости</option>
-        <option value='games'>Игры</option>
-        <option value='entertainments'>Развлечения</option>
-        <option value='IT'>IT/Программирование</option>
-        <option value='electronics'>Электроника</option>
-        <option value='literature'>Литература</option>
-        <option value='literature'>Музыка</option>
-    </select>
+        {{form.topic()}}
 
-    <label class="label-text">Введите текст статьи:</label>
-    <textarea name="text" class="text-area"></textarea>
-    <form>
-        <button>Отправить данные</button>
+        <label class="label-text">Введите текст статьи:</label>
+        {{form.text(class="text-area")}}
+        <div>
+            <button>Отправить данные</button>
+        </div>
     </form>
 </div>
-
+</body>
 {%endblock%}
