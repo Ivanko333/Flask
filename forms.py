@@ -15,5 +15,6 @@ class ArticleForm(Form):
 
 
 class UserForm(Form):
-    username = StringField("username")
-    password = PasswordField("password")
+    name = StringField("name", (validators.data_required(),))
+    username = StringField("username", (validators.data_required(),))
+    password = PasswordField("password", (validators.data_required(),))

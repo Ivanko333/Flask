@@ -1,0 +1,17 @@
+{%extends "baza.html"%}
+{%block content%}
+<div class="block">
+    <form method="POST">
+        <label class="label-text">Введите Ваше имя:</label>
+        {{form.name(class="input-title")}}
+        <label class="label-text">Введите Имя пользователя:</label>
+        {{form.username(class="input-title")}}
+        <label class="label-text">Введите Ваш пароль::</label>
+        {{form.password(class="input-title")}}
+        <div>
+            <button>Отправить данные</button>
+        </div>
+    </form>
+</div>
+
+{%endblock%}

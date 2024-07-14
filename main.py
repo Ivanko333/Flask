@@ -3,7 +3,6 @@ import db
 from forms import ArticleForm, UserForm
 from flask_user import login_required, UserManager
 
-
 app = Flask(__name__)
 
 
@@ -29,6 +28,19 @@ def add_article():
             return redirect('/')
 
 
+@app.route('/register', methods=("GET", "POST"))
+def register():
+    form = UserForm(request.form)
+    if request.method == "GET":
+        return render_template('register.html', form=form)
+
+    if request.method == "POST":
+        if form.validate():
+            db.add_user(form.name.data, form.username.data, form.password.data)
+
+
+
+
 @app.route('/<int:id>', methods=("GET", "POST"))
 def edit_article(id):
     form = ArticleForm(request.form)
@@ -38,7 +50,7 @@ def edit_article(id):
             form.title.data = info[1]
             form.topic.data = info[3]
             form.text.data = info[4]
-        except:
+        except :
             return redirect('/')
         return render_template('edit_article.html', form=form)
     if request.method == "POST" and "edit" in request.form:
@@ -50,13 +62,7 @@ def edit_article(id):
         return redirect('/')
 
 
-@app.route('/register', methods=("GET", "POST"))
-def register():
-    form = UserForm(request.form)
-    if request.method == "GET":
-        return render_template('/register')
-    if request.method == "POST":
-        db.add_user(form.username.data, form.password.data)
+
 
 
 if __name__ == '__main__':

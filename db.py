@@ -14,6 +14,7 @@ def create_table():
                    'content TEXT)')
     cursor.execute("CREATE TABLE IF NOT EXISTS users("
                    "id INTEGER PRIMARY KEY UNIQUE NOT NULL,"
+                   "name STR NOT NULL,"
                    "username STR UNIQUE NOT NULL,"
                    "password STR NOT NULL)")
 
@@ -47,8 +48,8 @@ def get_article(id):
     return cursor.fetchone()
 
 
-def add_user(username, password):
-    cursor.execute('INSERT INTO users(username, password) VALUES(?, ?)', (username, password))
+def add_user(name, username, password):
+    cursor.execute('INSERT INTO users(name, username, password) VALUES(?, ?, ?)', (name, username, password))
     db.commit()
     return cursor.lastrowid
 
