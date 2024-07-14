@@ -1,4 +1,4 @@
-from wtforms.fields import StringField, TextAreaField, SelectField
+from wtforms.fields import StringField, TextAreaField, SelectField, PasswordField
 from wtforms.form import Form
 from wtforms import validators
 
@@ -12,3 +12,8 @@ class ArticleForm(Form):
                                           ('Программирование', 'Программирование'),
                                           ('Образование', 'Образование'),
                                           ('Музыка', 'Музыка')])
+
+
+class UserForm(Form):
+    username = StringField("username")
+    password = PasswordField("password")

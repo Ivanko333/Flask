@@ -64,12 +64,35 @@
 }
 
 body{
-    background-color: #A0A0A0;
+    background-color: #BDCACA;
 }
 
 button{
     width: 200px;
     height: 50px;
     margin: 10px;
+}
 
+.about {
+    background: rgb(224, 251, 222);
+    background: linear-gradient(360deg, rgb(245, 255, 245) 0%, rgb(173, 252, 163) 100%);
+    padding: 100px 0 360px 0;
+    text-align: center;
+
+.about-info p {
+    font-size: 20px;
+    margin: 20px;
+}
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
 }

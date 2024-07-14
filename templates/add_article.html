@@ -1,20 +1,6 @@
-{%extends "baza.html"%}
-{%block content%}
-<body style="background-color: #A0A0A0">
-<div class="block">
-    <form method="POST">
-        <label class="label-text">Заголовок статьи:</label>
-        {{form.title(class="input-title")}}
-        <label class="label-text">Тема статьи:</label>
+{%extends "article_form.html"%}
+{%block article%}
 
-        {{form.topic()}}
+<button>Отправить данные</button>
 
-        <label class="label-text">Введите текст статьи:</label>
-        {{form.text(class="text-area")}}
-        <div>
-            <button>Отправить данные</button>
-        </div>
-    </form>
-</div>
-</body>
 {%endblock%}
