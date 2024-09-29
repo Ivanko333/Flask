@@ -7,7 +7,9 @@
         <h2> {{i.3}} </h2>
         <p class="header-style"> {{i.4}} </p>
         <div>
+            {%if current_user.is_authenticated and current_user.get_id() | int == i.5%}
             <a style="width: 100px" href="{{i.0}}">Изменить</a>
+            {%endif%}
         </div>
     <div class="time-container">
          <p class="header-style"> {{i.2}} </p>
